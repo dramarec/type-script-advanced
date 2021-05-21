@@ -7,4 +7,5 @@ export const rootReducer = combineReducers({
     starships,
 });
 
+//ts
 export type AppState = ReturnType<typeof rootReducer>;

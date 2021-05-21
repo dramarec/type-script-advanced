@@ -23,40 +23,41 @@ const initialState: StarshipsState = {
     error: false,
 };
 
-export const starshipsReducer =
-    (state = initialState, action: StarshipsActionTypes):
-        StarshipsState => {
-        switch (action.type) {
-            case STARSHIPS_START_FETCHING:
-                return {
-                    ...state,
-                    isFetching: true,
-                    error: false,
-                };
-            case STARSHIPS_STOP_FETCHING:
-                return {
-                    ...state,
-                    isFetching: false,
-                    error: false,
-                };
-            case STARSHIPS_SET_FETCHING_ERROR:
-                return {
-                    ...state,
-                    error: action.payload,
-                };
-            case STARSHIPS_FILL:
-                return {
-                    ...state,
-                    data: {
-                        ...action.payload,
-                    },
-                    error: false,
-                };
-            case STARSHIPS_FETCH_ASYNC:
-                return state;
-            default:
-                const x: never = action;
-        }
+export const starshipsReducer = (
+    state = initialState,
+    action: StarshipsActionTypes,
+): StarshipsState => {
+    switch (action.type) {
+        case STARSHIPS_START_FETCHING:
+            return {
+                ...state,
+                isFetching: true,
+                error: false,
+            };
+        case STARSHIPS_STOP_FETCHING:
+            return {
+                ...state,
+                isFetching: false,
+                error: false,
+            };
+        case STARSHIPS_SET_FETCHING_ERROR:
+            return {
+                ...state,
+                error: action.payload,
+            };
+        case STARSHIPS_FILL:
+            return {
+                ...state,
+                data: {
+                    ...action.payload,
+                },
+                error: false,
+            };
+        case STARSHIPS_FETCH_ASYNC:
+            return state;
+        default:
+            const x: never = action;
+    }
 
-        return state;
-    };
+    return state;
+};

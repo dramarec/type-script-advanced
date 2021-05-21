@@ -32,7 +32,8 @@ export function fill(payload: Starships): StarshipsFillAction {
     };
 }
 
-export function setfetchingError(payload: ErrorHttpAction): StarshipsSetFetchingErrorAction {
+export function setfetchingError(payload: ErrorHttpAction):
+    StarshipsSetFetchingErrorAction {
     return {
         type: STARSHIPS_SET_FETCHING_ERROR,
         error: true,

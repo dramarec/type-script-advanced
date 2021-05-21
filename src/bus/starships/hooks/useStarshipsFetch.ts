@@ -7,11 +7,10 @@ import { AppState } from '../../../init/rootReducer';
 
 export const useStarshipsFetch = (): StarshipsState => {
     const dispatch = useDispatch();
-    const {
-        data,
-        isFetching,
-        error,
-    } = useSelector<AppState, StarshipsState>((state) => state.starships);
+
+    const { data, isFetching, error } = useSelector<AppState, StarshipsState>(
+        state => state.starships,
+    );
 
     useEffect(() => {
         dispatch(fetchAsync());

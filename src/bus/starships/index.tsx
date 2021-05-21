@@ -10,13 +10,12 @@ export const Starships: FC = () => {
     //     typeof error === 'object' && error.status === 404 && <p>Not found!</p>;
     const errorMessageJSX = error && <p>{error}</p>;
 
-    const loaderJSX =
-        isFetching && <p>Loading data from API...</p>;
+    const loaderJSX = isFetching && <p>Loading data from API...</p>;
 
     const listJSX =
-        isFetching || data.results.map(
-            ({ name }: Starship, index: number):
-                ReactElement => (
+        isFetching ||
+        data.results.map(
+            ({ name }: Starship, index: number): ReactElement => (
                 <li key={Number(index)}>{name}</li>
             ),
         );
