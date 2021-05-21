@@ -6,9 +6,11 @@ export type Starships = {
     results: Starship[];
 };
 
-export type ErrorHttpAction = {
-    status: number;
-};
+export type ErrorHttpAction = string;
+
+// export type ErrorHttpAction = {
+//     status: number;
+// };
 
 // Sync
 export const STARSHIPS_START_FETCHING = 'STARSHIPS_START_FETCHING';

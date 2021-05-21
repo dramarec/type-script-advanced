@@ -11,7 +11,8 @@
 -   yarn add -D @redux-saga/core
 -   yarn add react-redux
 -   yarn add -D @types/react-redux
--   yarn add -D redux-devtools-extension
+-   yarn add redux-devtools-extension
+-   yarn add -D eslint-plugin-import
 
 ## Available Scripts
 
@@ -21,4 +22,20 @@
     $PWD/'src/**/*.{ts,tsx}'; prettier-eslint --write $PWD/'src/\*_/_.{ts,tsx}'",
 -   "typescript": "tsc"
 
+### `yarn`
+
+Запускает установку всех необходимых зависимостей
+
 ### `yarn start`
+
+Запускает приложение в development режиме
+
+### `yarn lint:ts`
+
+Запускает проверку Typescript с помощью ESLint
+
+### `yarn prettier:ts`
+
+Запускает автоматическое исправление TypeScript c помощью инструмента Prettier.
+Во время этой задачи используются правила ESLint в качестве единого источника
+правды.

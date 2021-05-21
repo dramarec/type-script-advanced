@@ -1,7 +1,10 @@
 {
     "extends": [
         "airbnb",
-        "plugin:@typescript-eslint/recommended"
+        "plugin:@typescript-eslint/recommended",
+        "plugin:import/errors",
+        "plugin:import/warnings",
+        "plugin:import/typescript"
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
@@ -20,7 +23,8 @@
                 ]
             }
         ],
-        // "import/prefer-default-export": 0,
+        // "react/jsx-props-no-spreading": 0,
+        "import/prefer-default-export": 0,
         "import/extensions": [
             1,
             "ignorePackages",
@@ -36,17 +40,6 @@
                 ".ts",
                 ".tsx"
             ]
-        },
-        "import/resolver": {
-            "node": {
-                "extensions": [
-                    ".ts",
-                    ".tsx"
-                ],
-                "paths": [
-                    "src"
-                ]
-            }
         },
         "import/extensions": [
             ".ts",
